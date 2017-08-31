@@ -12,6 +12,7 @@ const pkg = require('./package.json');
 const ROOT_PATH = __dirname;
 const config = {
   paths: {
+    samples: path.join(ROOT_PATH, 'samples'),
     dist: path.join(ROOT_PATH, 'dist'),
     src: path.join(ROOT_PATH, 'src'),
     docs: path.join(ROOT_PATH, 'docs'),
@@ -72,6 +73,48 @@ const siteCommon = {
     })
   ]
 };
+
+const samples = merge(common, siteCommon, {
+  devtool: 'eval-source-map',
+  entry: {
+    app: [config.paths.samples]
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"development"'
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        },
+        include: [
+          config.paths.samples,
+          config.paths.src
+        ]
+      }
+    ]
+  },
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    host: process.env.HOST,
+    port: process.env.PORT,
+    stats: 'errors-only'
+  }
+});
 
 const dev = merge(common, siteCommon, {
   devtool: 'eval-source-map',
@@ -221,6 +264,7 @@ module.exports = (env) => {
   process.env.BABEL_ENV = env;
 
   const targets = {
+    samples,
     dev,
     dist,
     distMin,

@@ -1,4 +1,5 @@
 module.exports = {
-  Visibility: require('./Visibility').default
+  Visibility: require('./Visibility').default,
+  Switch: require('./Switch').default
 };
 

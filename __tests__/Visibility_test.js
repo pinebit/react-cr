@@ -17,3 +17,22 @@ it('Visibility renders correctly when visible is true', () => {
 
   expect(tree).toMatchSnapshot();
 });
+
+it('Visibility renders with wrapper when specified', () => {
+  const tree = renderer.create(
+    <Visibility visible wrapper="header"><h1>Test</h1></Visibility>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+it('Visibility renders with wrapper when many children', () => {
+  const tree = renderer.create(
+    <Visibility visible>
+      <h1>Test1</h1>
+      <h1>Test2</h1>
+    </Visibility>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});

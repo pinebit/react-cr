@@ -5,6 +5,7 @@
   "user": "pinebit",
   "version": "0.0.4",
   "scripts": {
+    "samples": "webpack-dev-server --env samples",
     "start": "webpack-dev-server --env dev",
     "test": "jest",
     "test:coverage": "jest --coverage",

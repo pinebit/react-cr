@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch does not render when index is invalid 1`] = `null`;
+
+exports[`Switch renders correctly when index is valid 1`] = `
+<h1>
+  2
+</h1>
+`;

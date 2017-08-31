@@ -1,14 +1,23 @@
-module.exports = {
+{
   "extends": "airbnb",
   "parser": "babel-eslint",
   "env": {
     "browser": true,
     "jasmine": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
   "plugins": [
-    "react"
+    "react",
+    "jsx-a11y"
   ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "comma-dangle": ["error", "never"],
     "global-require": 0,
@@ -21,6 +30,7 @@ module.exports = {
     "react/jsx-filename-extension": 0,
     "react/sort-comp": 0,
     "react/no-multi-comp": 0,
-    "react/require-extension": 0
+    "react/require-extension": 0,
+    "react/prop-types": 0
   }
-};
+}
