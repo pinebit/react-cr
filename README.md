@@ -20,11 +20,21 @@ import { Visibility, Switch } from 'react-cr';
   <Second />
 </Switch>
 
+// repeat (clone) given n times 
+<Repeat count={this.state.stars}>
+  <RatingStar />
+</Repeat>
+
+// render for mobile (or Desktop) only
+<Mobile>
+  <MobileMenu />
+</Mobile>
+
 ```
 
 ## Components
 
-[See detailed specification](/components)
+[See detailed specification](https://pinebit.github.io/react-cr/#/components)
 
 ## License
 

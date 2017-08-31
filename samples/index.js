@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Visibility, Switch, Mobile, Desktop } from '../src';
+import {
+  Visibility,
+  Switch,
+  Mobile,
+  Desktop,
+  Repeat
+} from '../src';
 
 const Child = ({ text }) => (
   <h4 style={{ border: 'solid 1px green', width: 400 }}>{text}</h4>
@@ -9,7 +15,8 @@ const Child = ({ text }) => (
 class SampleUsage extends React.PureComponent {
   state = {
     visibilityVisible: true,
-    switchIndex: 0
+    switchIndex: 0,
+    repeatCount: 3
   };
 
   toggleVisible = () => {
@@ -23,6 +30,13 @@ class SampleUsage extends React.PureComponent {
     this.setState({
       ...this.state,
       switchIndex: Number(e.target.value)
+    });
+  };
+
+  onRepeatCountChange = (e) => {
+    this.setState({
+      ...this.state,
+      repeatCount: Number(e.target.value)
     });
   };
 
@@ -69,6 +83,16 @@ class SampleUsage extends React.PureComponent {
           <Desktop>
             <Child text="You are on a desktop device!" />
           </Desktop>
+        </section>
+
+        <hr />
+
+        <h1><pre>Repeat component</pre></h1>
+        <section>
+          <input type="number" value={this.state.repeatCount} onChange={this.onRepeatCountChange} min={0} max={10} />
+          <Repeat count={this.state.repeatCount}>
+            <Child text="item" />
+          </Repeat>
         </section>
 
       </div>

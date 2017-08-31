@@ -1,12 +1,13 @@
 import React from 'react';
+import Wrapper from '../Wrapper';
 
-const Switch = ({ children, index }) => {
+const Switch = ({ children, index, ...wrapperProps }) => {
   const childrenCount = React.Children.count(children);
   if (index >= childrenCount) {
     return null;
   }
 
-  return children[index];
+  return <Wrapper {...wrapperProps}>{children[index]}</Wrapper>;
 };
 
 Switch.propTypes = {
