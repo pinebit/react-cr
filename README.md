@@ -1,6 +1,6 @@
 # react-cr - a tiny library for conditional components rendering
 
-This is a simple tiny library that aimed to simplify conditional rendering inside JSX.
+A simple tiny library for conditional rendering inside JSX.
 
 ## Basic Usage
 
