@@ -3,7 +3,7 @@
   "description": "A tiny library for conditional rendering inside JSX.",
   "author": "Andrei Smirnov",
   "user": "pinebit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "samples": "webpack-dev-server --env samples",
     "start": "webpack-dev-server --env dev",
