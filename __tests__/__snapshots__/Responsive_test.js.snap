@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Desktop renders correctly with header wrapper 1`] = `
+<header>
+  <h1>
+    1
+  </h1>
+</header>
+`;
+
+exports[`Desktop renders correctly with implicit wrapping 1`] = `
+<div>
+  <h1>
+    1
+  </h1>
+  <h1>
+    2
+  </h1>
+</div>
+`;
+
+exports[`Desktop renders correctly without wrapping 1`] = `
+<h1>
+  1
+</h1>
+`;
+
+exports[`Mobile does not render because we are on desktop 1`] = `null`;

@@ -21,3 +21,15 @@ Properties:
 * `index (number)`
 
 If `index` is out of bound, `null` is rendered.
+
+### `Desktop` and `Mobile`
+*Controls rendering for desktop and mobile devices respectively.*
+
+Properties:
+* `wrapper (string)`
+
+See `Visibility.wrapper` for this property description.
+
+When user's device is recognized as a mobile device, `Mobile` renders its children.
+Alternatively, `Desktop` component renders its children when that condition is not met.
+ 

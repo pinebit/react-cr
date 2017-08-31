@@ -4,7 +4,9 @@ import Visibility from '../src/Visibility';
 
 it('Visibility renders correctly when visible is false', () => {
   const tree = renderer.create(
-    <Visibility visible={false}><h1>Test</h1></Visibility>
+    <Visibility visible={false}>
+      <h1>Test</h1>
+    </Visibility>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
@@ -12,15 +14,19 @@ it('Visibility renders correctly when visible is false', () => {
 
 it('Visibility renders correctly when visible is true', () => {
   const tree = renderer.create(
-    <Visibility visible><h1>Test</h1></Visibility>
+    <Visibility visible>
+      <h1>Test</h1>
+    </Visibility>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
 
-it('Visibility renders with wrapper when specified', () => {
+it('Visibility renders with header wrapper', () => {
   const tree = renderer.create(
-    <Visibility visible wrapper="header"><h1>Test</h1></Visibility>
+    <Visibility visible wrapper="header">
+      <h1>Test</h1>
+    </Visibility>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();

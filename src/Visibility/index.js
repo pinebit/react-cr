@@ -5,7 +5,7 @@ const Visibility = ({ children, visible, wrapper, ...wrapperProps }) => {
     return null;
   }
 
-  const useWrapper = React.Children.count(children) > 1;
+  const useWrapper = React.Children.count(children) > 1 || wrapper;
   if (useWrapper) {
     const type = wrapper || 'div';
     return React.createElement(type, wrapperProps, children);

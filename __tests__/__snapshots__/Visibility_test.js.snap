@@ -8,6 +8,14 @@ exports[`Visibility renders correctly when visible is true 1`] = `
 </h1>
 `;
 
+exports[`Visibility renders with header wrapper 1`] = `
+<header>
+  <h1>
+    Test
+  </h1>
+</header>
+`;
+
 exports[`Visibility renders with wrapper when many children 1`] = `
 <div>
   <h1>
@@ -17,10 +25,4 @@ exports[`Visibility renders with wrapper when many children 1`] = `
     Test2
   </h1>
 </div>
-`;
-
-exports[`Visibility renders with wrapper when specified 1`] = `
-<h1>
-  Test
-</h1>
 `;
