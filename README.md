@@ -1,4 +1,4 @@
-# react-cr - a tiny library for conditional components rendering
+# react-cr
 
 A simple tiny library for conditional rendering inside JSX.
 
