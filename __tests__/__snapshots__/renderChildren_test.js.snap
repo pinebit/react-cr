@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renderChildren yields wrapped multiple children 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-block",
+    }
+  }
+>
+  <h1>
+    Test1
+  </h1>
+  <h2>
+    Test2
+  </h2>
+</div>
+`;
+
+exports[`renderChildren yields wrapped single string child 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-block",
+    }
+  }
+>
+  Test
+</div>
+`;

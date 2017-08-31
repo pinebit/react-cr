@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Visibility renders correctly when visible is false 1`] = `null`;
+
+exports[`Visibility renders correctly when visible is true 1`] = `
+<h1>
+  Test
+</h1>
+`;
