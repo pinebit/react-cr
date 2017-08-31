@@ -1,6 +1,6 @@
 {
   "name": "react-cr",
-  "description": "A simple tiny library for conditional rendering inside JSX.",
+  "description": "A tiny library for conditional rendering inside JSX.",
   "author": "Andrei Smirnov",
   "user": "pinebit",
   "version": "0.0.5",

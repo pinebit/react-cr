@@ -17,6 +17,11 @@ const pages = [
     path: '/',
     title: 'Introduction',
     component: require('../README.md')
+  },
+  {
+    path: '/components',
+    title: 'Components',
+    component: require('./COMPONENTS.md')
   }
 ];
 
