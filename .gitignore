@@ -8,3 +8,5 @@ coverage/
 npm-debug.log
 .eslintcache
 .idea/
+package-lock.json
+
