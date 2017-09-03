@@ -103,5 +103,8 @@
   "license": "MIT",
   "pre-push": [
     "test"
-  ]
+  ],
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  }
 }

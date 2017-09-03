@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Wrapper from '../Wrapper';
 
 const Visibility = ({ visible, ...wrapperProps }) => {
@@ -14,7 +15,7 @@ Visibility.defaultProps = {
 };
 
 Visibility.propTypes = {
-  visible: React.PropTypes.bool
+  visible: PropTypes.bool
 };
 
 export default Visibility;

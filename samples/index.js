@@ -5,7 +5,8 @@ import {
   Switch,
   Mobile,
   Desktop,
-  Repeat
+  Repeat,
+  Interleave
 } from '../src';
 
 const Child = ({ text }) => (
@@ -16,7 +17,9 @@ class SampleUsage extends React.PureComponent {
   state = {
     visibilityVisible: true,
     switchIndex: 0,
-    repeatCount: 3
+    repeatCount: 3,
+    interleaveFirst: false,
+    interleaveLast: false
   };
 
   toggleVisible = () => {
@@ -37,6 +40,20 @@ class SampleUsage extends React.PureComponent {
     this.setState({
       ...this.state,
       repeatCount: Number(e.target.value)
+    });
+  };
+
+  onInterleaveFirstToggle = () => {
+    this.setState({
+      ...this.state,
+      interleaveFirst: !this.state.interleaveFirst
+    });
+  };
+
+  onInterleaveLastToggle = () => {
+    this.setState({
+      ...this.state,
+      interleaveLast: !this.state.interleaveLast
     });
   };
 
@@ -93,6 +110,24 @@ class SampleUsage extends React.PureComponent {
           <Repeat count={this.state.repeatCount}>
             <Child text="item" />
           </Repeat>
+        </section>
+
+        <hr />
+
+        <h1><pre>Interleave component</pre></h1>
+        <section>
+          <input type="checkbox" name="first" value={this.state.interleaveFirst} onChange={this.onInterleaveFirstToggle} />first,
+          <input type="checkbox" name="last" value={this.state.interleaveLast} onChange={this.onInterleaveLastToggle} />last
+          <Interleave
+            wrapper="p"
+            separator={<span>,</span>}
+            first={this.state.interleaveFirst}
+            last={this.state.interleaveLast}
+          >
+            <span key="alpha">Alpha</span>
+            <span key="beta">Beta</span>
+            <span key="gamma">Gamma</span>
+          </Interleave>
         </section>
 
       </div>

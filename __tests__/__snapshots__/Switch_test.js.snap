@@ -2,6 +2,23 @@
 
 exports[`Switch does not render when index is invalid 1`] = `null`;
 
+exports[`Switch renders correctly when index is array 1`] = `
+<div>
+  <h1>
+    1
+  </h1>
+  <h1>
+    3
+  </h1>
+</div>
+`;
+
+exports[`Switch renders correctly when index is array with one valid index 1`] = `
+<h1>
+  2
+</h1>
+`;
+
 exports[`Switch renders correctly when index is valid 1`] = `
 <h1>
   2

@@ -1,6 +1,6 @@
 # react-cr
 
-A tiny library for conditional rendering inside JSX.
+A tiny library for conditional rendering in JSX.
 
 ## Basic Usage
 
@@ -20,6 +20,11 @@ import { Visibility, Switch } from 'react-cr';
   <Second />
 </Switch>
 
+// select child by multiple indices
+<Switch index={[1, 10, 12, 43]}>
+  {items.map(...)}
+</Switch>
+
 // repeat (clone) given n times 
 <Repeat count={this.state.stars}>
   <RatingStar />
@@ -29,6 +34,13 @@ import { Visibility, Switch } from 'react-cr';
 <Mobile>
   <MobileMenu />
 </Mobile>
+
+// interleaves children with the given separator
+<Interleave wrapper="p" separator={<span>,</span>}>
+  <span key="alpha">Alpha</span>
+  <span key="beta">Beta</span>
+  <span key="gamma">Gamma</span>
+</Interleave>
 
 ```
 

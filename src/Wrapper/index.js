@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Wrapper = ({ children, wrapper, reverse, ...wrapperProps }) => {
   if (!children) {
@@ -16,8 +17,8 @@ const Wrapper = ({ children, wrapper, reverse, ...wrapperProps }) => {
 };
 
 Wrapper.propTypes = {
-  wrapper: React.PropTypes.string,
-  reverse: React.PropTypes.bool
+  wrapper: PropTypes.string,
+  reverse: PropTypes.bool
 };
 
 export default Wrapper;

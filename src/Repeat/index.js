@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Wrapper from '../Wrapper';
 
 const Repeat = ({ count, children, ...wrapperProps }) => {
@@ -24,8 +25,8 @@ const Repeat = ({ count, children, ...wrapperProps }) => {
 };
 
 Repeat.propTypes = {
-  count: React.PropTypes.number.isRequired,
-  children: React.PropTypes.node
+  count: PropTypes.number.isRequired,
+  children: PropTypes.node
 };
 
 export default Repeat;

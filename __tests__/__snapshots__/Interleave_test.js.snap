@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Interleave does not render children without keys 1`] = `<div />`;
+
+exports[`Interleave does not render with empty separator 1`] = `null`;
+
+exports[`Interleave does not render without children 1`] = `null`;
+
+exports[`Interleave renders children with separator 1`] = `
+<div>
+  <span>
+    A
+  </span>
+  <span>
+    ,
+  </span>
+  <span>
+    B
+  </span>
+  <span>
+    ,
+  </span>
+  <span>
+    C
+  </span>
+</div>
+`;
+
+exports[`Interleave renders children with separator and append the separator 1`] = `
+<div>
+  <span>
+    A
+  </span>
+  <span>
+    ,
+  </span>
+  <span>
+    B
+  </span>
+  <span>
+    ,
+  </span>
+  <span>
+    C
+  </span>
+  <span>
+    ,
+  </span>
+</div>
+`;
+
+exports[`Interleave renders children with separator and prepend the separator 1`] = `
+<div>
+  <span>
+    ,
+  </span>
+  <span>
+    A
+  </span>
+  <span>
+    ,
+  </span>
+  <span>
+    B
+  </span>
+  <span>
+    ,
+  </span>
+  <span>
+    C
+  </span>
+</div>
+`;

@@ -3,5 +3,6 @@ module.exports = {
   Switch: require('./Switch').default,
   Mobile: require('./Responsive').Mobile,
   Desktop: require('./Responsive').Desktop,
-  Repeat: require('./Repeat').default
+  Repeat: require('./Repeat').default,
+  Interleave: require('./Interleave').default
 };
