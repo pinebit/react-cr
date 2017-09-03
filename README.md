@@ -2,12 +2,29 @@
 
 A tiny library for conditional rendering in JSX.
 
+The purpose of this library to offer a few components that will replace your JS-in-JSX with behavioral components.
+
+For example, instead of writing conditions like this:
+```jsx harmony
+{this.state.isLoading && <Loading />}
+```
+
+You can use one of react-cr components:
+```jsx harmony
+<Visibility visible={this.state.isLoading}>
+  <Loading />
+</Visibility>
+```
+
+Similar to this example, the library offers: `Switch, Mobile, Desktop, Repeat, Interleave`.
+Check [the complete spec here](https://pinebit.github.io/react-cr).
+
 ## Basic Usage
 
 `npm install --save react-cr`
 
-```js
-import { Visibility, Switch } from 'react-cr';
+```jsx harmony
+import { Visibility, Switch, Mobile, Desktop, Repeat, Interleave } from 'react-cr';
 
 // control children visibility
 <Visibility visible={this.state.showLogo}>
